@@ -15,6 +15,7 @@ seneca
     console.log // prints { answer: 4 }
   )
   .act( 
+    // the extra integer property is just ignored!
     {role:'math', cmd:'sum', left:1.5, right:2.5, integer:true}, 
     console.log // prints { answer: 4 }
   )
