@@ -35,7 +35,7 @@ seneca
       })
     })
 
-  // this matches role:math,cmd:sum
+  // enhanced role:math,cmd:sum
   .act( 'role:math,cmd:sum,left:1.5,right:2.5', 
         console.log // prints { answer: 4, info: '1.5+2.5' }
       )
