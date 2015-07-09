@@ -5,6 +5,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.13.2",
+    "express": "^4.13.1",
     "seneca": "0.6.2"
   }
 }

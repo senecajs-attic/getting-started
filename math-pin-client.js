@@ -12,6 +12,3 @@ require( 'seneca' )()
 
   // executed locally
   .act('say:hello',console.log)
-
-
-
