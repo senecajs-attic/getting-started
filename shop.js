@@ -9,6 +9,7 @@ module.exports = function( options ) {
   })
 
   this.add( 'role:shop,cmd:purchase', function( msg, respond ) {
+    console.log('SHOP',this.fixedargs)
     this.make( 'product' ).load$(msg.id, function( err, product ) {
       if( err ) return respond( err )
       

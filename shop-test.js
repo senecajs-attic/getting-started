@@ -1,9 +1,11 @@
-
 var assert = require('assert')
 
 var seneca = require('seneca')()
       .use('shop')
-      .client({port:9002,pin:'role:shop,info:purchase'})
+
+      // uncomment to send messages to the shop-stats service
+      // .client({port:9003,pin:'role:shop,info:purchase'})
+
       .error( assert.fail )
 
 add_product()

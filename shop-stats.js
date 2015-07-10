@@ -7,5 +7,5 @@ require('seneca')()
     console.log(stats)
     respond()
   })
-  .listen({port:9002,pin:'role:shop,info:purchase'})
+  .listen({port:9003,pin:'role:shop,info:purchase'})
 
