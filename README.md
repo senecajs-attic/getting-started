@@ -1,10 +1,10 @@
-![logo]((http://senecajs.org/files/assets/seneca-logo.png))
+![Seneca](http://senecajs.org/files/assets/seneca-logo.png)
 > A Node.js toolkit for micro service architectures
 
 [![Gitter][gitter-badge]][gitter-url]
 
 # getting-started
-This repo contains all of the code examples from the [Getting started guide][] in [Senecajs.org][].
+This repo contains all of the code examples from the [Getting started guide][] in [Senecajs.org][]
 
 ## Contributing
 The [Senecajs org][] encourage open participation. If you feel you can help in any way, be it with
