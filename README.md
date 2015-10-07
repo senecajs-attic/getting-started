@@ -1,4 +1,4 @@
-![logo](./src/files/assets/seneca-logo.png)
+![logo](http://senecajs.surge.sh/files/assets/seneca-logo.png)
 > A Node.js toolkit for micro service architectures
 
 [![Gitter][gitter-badge]][gitter-url]
