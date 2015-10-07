@@ -4,7 +4,7 @@
 [![Gitter][gitter-badge]][gitter-url]
 
 # getting-started
-Code examples for the Getting Started Guide
+This repo contains all of the code examples from the [Getting started guide][] in [Senecajs.org][].
 
 ## Contributing
 The [Senecajs org][] encourage open participation. If you feel you can help in any way, be it with
@@ -19,3 +19,5 @@ Copyright Richard Rodger and other contributors 2015, Licensed under [MIT][].
 
 [MIT]: ./LICENSE
 [Senecajs org]: https://github.com/senecajs/
+[Getting started guide]: http://senecajs.org/get-started/
+[Senecajs.org]: http://senecajs.org/
