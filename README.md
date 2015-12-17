@@ -2,6 +2,8 @@
 > A Node.js toolkit for micro service architectures
 
 # getting-started
+
+Lead Maintainer: [Adrien Becchis](https://github.com/AdrieanKhisbe)
 [![Gitter][gitter-badge]][gitter-url]
 
 This repo contains all of the code examples from the [Getting started guide][] in [Senecajs.org][]
