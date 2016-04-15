@@ -1,5 +1,5 @@
 module.exports = function api( options ) {
-  
+
   var valid_ops = { sum:'sum', product:'product' }
 
   this.add( 'role:api,path:calculate', function( msg, respond ) {
@@ -11,14 +11,14 @@ module.exports = function api( options ) {
   })
 
   this.add( 'role:api,path:shop', function( msg, respond ) {
-    var shopmsg = { role:'shop', id:msg.id }
+    var shopmsg = { role:'shop', id:msg.pid }
     if( 'get'      == msg.operation ) shopmsg.get = 'product'
     if( 'purchase' == msg.operation ) shopmsg.cmd = 'purchase'
 
     this.act( shopmsg, respond )
   })
 
-  
+
   this.add( 'init:api', function( msg, respond ) {
     this.act('role:web',{use:{
       prefix: '/api',
