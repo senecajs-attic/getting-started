@@ -1,5 +1,6 @@
 
 var seneca = require( 'seneca' )()
+      .use('entity')
       .use( 'api-all' )
       .client( { type:'tcp', pin:'role:math' } )
       .client( { port:9002,  pin:'role:shop' } )
@@ -14,4 +15,3 @@ seneca.act(
   'role:shop,add:product',{data:{name:'Apple',price:1.99}},
   console.log
 )
-

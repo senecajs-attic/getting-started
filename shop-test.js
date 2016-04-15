@@ -1,6 +1,7 @@
 var assert = require('assert')
 
 var seneca = require('seneca')()
+      .use('entity')
       .use('shop')
 
       // uncomment to send messages to the shop-stats service
@@ -11,12 +12,12 @@ var seneca = require('seneca')()
 add_product()
 
 function add_product() {
-  seneca.act( 
-    'role:shop,add:product,data:{name:Apple,price:1.99}', 
+  seneca.act(
+    'role:shop,add:product,data:{name:Apple,price:1.99}',
     function( err, save_apple ) {
 
-      this.act( 
-        'role:shop,get:product', {id:save_apple.id}, 
+      this.act(
+        'role:shop,get:product', {id:save_apple.id},
         function( err, load_apple ) {
 
           assert.equal( load_apple.name, save_apple.name )
