@@ -1,3 +1,7 @@
+# Project Status :
+This plugin is not being supported by the seneca organization,  and is no longer proven to work.
+If you are interested in maintaining this project, please contact us via the issue queue.
+
 ![Seneca](http://senecajs.org/files/assets/seneca-logo.png)
 > A Node.js toolkit for micro service architectures
 
