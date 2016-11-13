@@ -3,24 +3,32 @@ module.exports = function api( options ) {
   var valid_ops = { sum:'sum', product:'product' }
 
   this.add( 'role:api,path:calculate', function( msg, respond ) {
+    var left = msg.args.query.left
+    var right = msg.args.query.right
+    var operation = msg.args.params.operation
     this.act( 'role:math', {
-      cmd:   valid_ops[msg.operation],
-      left:  msg.left,
-      right: msg.right,
+      cmd:   valid_ops[operation],
+      left:  left,
+      right: right,
     }, respond )
   })
 
   this.add( 'role:api,path:shop', function( msg, respond ) {
-    var shopmsg = { role:'shop', id:msg.pid }
-    if( 'get'      == msg.operation ) shopmsg.get = 'product'
-    if( 'purchase' == msg.operation ) shopmsg.cmd = 'purchase'
+    var id = null
+    if (msg.args.query.pid) { id = msg.args.query.pid}
+    if (msg.args.body.pid) { id = msg.args.body.pid}
+
+    var operation = msg.args.params.operation
+    var shopmsg = { role:'shop', id:id }
+    if( 'get'      == operation ) shopmsg.get = 'product'
+    if( 'purchase' == operation ) shopmsg.cmd = 'purchase'
 
     this.act( shopmsg, respond )
   })
 
 
   this.add( 'init:api', function( msg, respond ) {
-    this.act('role:web',{use:{
+    this.act('role:web',{routes:{
       prefix: '/api',
       pin:    'role:api,path:*',
       map: {
@@ -28,7 +36,7 @@ module.exports = function api( options ) {
       }
     }})
 
-    this.act('role:web',{use:{
+    this.act('role:web',{routes:{
       prefix: '/api',
       pin:    'role:api,path:*',
       map: {
