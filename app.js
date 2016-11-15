@@ -1,4 +1,5 @@
 
+var SenecaWeb = require('seneca-web')
 var Express = require('express')
 var Router = Express.Router
 var context = new Router()
@@ -15,7 +16,7 @@ var app = Express()
       .listen(3000)
 
 var seneca = require( 'seneca' )()
-      .use( 'seneca-web', senecaWebConfig )
+      .use( SenecaWeb, senecaWebConfig )
       .use( 'api' )
       .client( { type:'tcp', pin:'role:math' } )
 
