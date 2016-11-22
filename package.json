@@ -8,6 +8,8 @@
     "body-parser": "^1.13.2",
     "express": "^4.13.1",
     "seneca": "2.0.0",
-    "seneca-entity": "0.0.1"
+    "seneca-entity": "0.0.1",
+    "seneca-web": "^2.0.0",
+    "seneca-web-adapter-express": "^1.0.2"
   }
 }
