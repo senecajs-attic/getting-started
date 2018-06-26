@@ -7,8 +7,7 @@ If you are interested in maintaining this project, please contact us via the iss
 
 # getting-started
 
-Lead Maintainer: [Adrien Becchis](https://github.com/AdrieanKhisbe)
-[![Gitter][gitter-badge]][gitter-url]
+Lead Maintainer: *unmaintained*
 
 This repo contains all of the code examples from the [Getting started guide][] in [Senecajs.org][]
 
